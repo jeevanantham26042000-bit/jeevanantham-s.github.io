@@ -1,0 +1,258 @@
+<!-- Jeevanantham S | Automotive & Aerospace Design Engineer
+     Single-file responsive portfolio HTML (Blue–Orange accents)
+     Replace placeholder images and resume link before publishing.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jeevanantham S | Automotive & Aerospace Design Engineer</title>
+  <meta name="description" content="Portfolio of Jeevanantham S — Fusion 360 & CATIA V5 design engineer (Automotive / Aerospace)." />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#222022;
+      --muted:#556;
+      --accent:#0b66ff; /* blue */
+      --accent-2:#ff7a18; /* orange */
+      --card:#fbfdff;
+      --radius:12px;
+      --max-width:1100px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+    header{background:linear-gradient(135deg,var(--accent) 0%, rgba(11,102,255,0.9) 45%, rgba(255,122,24,0.07) 100%);color:#fff;padding:40px 20px}
+    .container{max-width:var(--max-width);margin:0 auto;padding:30px}
+    .header-inner{display:flex;gap:20px;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:18px;align-items:center}
+    .avatar{width:84px;height:84px;border-radius:14px;background:linear-gradient(180deg,#fff2 0,#fff0 60%);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);box-shadow:0 8px 24px rgba(2,10,40,0.12)}
+    h1{margin:0;font-size:22px}
+    p.lead{margin:6px 0 0;color:rgba(255,255,255,0.95)}
+
+    nav.top-actions{display:flex;gap:12px}
+    .btn{background:#fff;border:0;padding:10px 14px;border-radius:10px;font-weight:600;color:var(--accent);cursor:pointer;text-decoration:none}
+    .btn.alt{background:transparent;border:1px solid rgba(255,255,255,0.18);color:#fff}
+
+    main{margin-top:24px}
+    .section{padding:32px 0;border-bottom:1px solid #f2f4f6}
+    .two-col{display:grid;grid-template-columns:1fr 340px;gap:28px}
+    @media (max-width:900px){.two-col{grid-template-columns:1fr} .header-inner{flex-direction:column;align-items:flex-start} .avatar{width:72px;height:72px} }
+
+    .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(12,20,40,0.04)}
+    h2{margin:0 0 12px;font-size:18px}
+    .muted{color:var(--muted)}
+
+    /* Skills */
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{background:linear-gradient(90deg,rgba(11,102,255,0.06),rgba(255,122,24,0.03));padding:10px 12px;border-radius:10px;font-weight:600;color:var(--accent)}
+
+    /* Projects grid */
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    @media (max-width:900px){.projects{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:600px){.projects{grid-template-columns:1fr}}
+    .proj{border-radius:12px;overflow:hidden;background:#fff;border:1px solid #eee}
+    .proj img{width:100%;height:180px;object-fit:cover;display:block}
+    .proj .content{padding:12px}
+    .proj .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .tag{font-size:12px;padding:6px 8px;background:linear-gradient(90deg,var(--accent) 0%, var(--accent-2) 100%);color:#fff;border-radius:8px}
+
+    /* Contact */
+    .contact-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+    .contact-list a{color:var(--accent);text-decoration:none}
+
+    footer{padding:20px;background:#fafbfd;text-align:center;color:var(--muted)}
+
+    /* small helpers */
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(11,102,255,0.08);color:var(--accent);font-weight:700}
+
+    /* download button */
+    .download{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;text-decoration:none;font-weight:700}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <div class="brand">
+          <div class="avatar">JS</div>
+          <div>
+            <h1>Jeevanantham S</h1>
+            <p class="lead">Design Engineer — Automotive & Aerospace</p>
+            <div style="margin-top:8px"><span class="pill">Fusion 360 • CATIA V5</span></div>
+          </div>
+        </div>
+        <nav class="top-actions">
+          <a class="btn" href="#projects">Projects</a>
+          <a class="btn alt" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- About + Sidebar -->
+    <section class="section">
+      <div class="two-col">
+        <div>
+          <div class="card">
+            <h2>About Me</h2>
+            <p class="muted">I am a passionate Design Engineer with strong expertise in <strong>Fusion 360</strong> and <strong>CATIA V5</strong>, focusing on automotive and aerospace component design. With a background in IT, I combine analytical thinking and process automation with hands-on 3D modeling to create efficient, manufacturable designs.</p>
+            <ul style="margin-top:12px;color:var(--muted)">
+              <li>Specialties: Parametric modeling, surface design, assembly modeling, GD&amp;T.</li>
+              <li>Manufacturing focus: DFM/DFA, sheet-metal, prototyping, 3D printing.</li>
+              <li>Tools: Fusion 360 (simulation & manufacturing), CATIA V5 (surfaces & assemblies).</li>
+            </ul>
+            <a class="download" href="/resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
+          </div>
+
+          <div style="height:18px"></div>
+
+          <div class="card">
+            <h2>Technical Skills</h2>
+            <div class="skills" style="margin-top:12px">
+              <div class="skill">Fusion 360</div>
+              <div class="skill">CATIA V5</div>
+              <div class="skill">GD&amp;T</div>
+              <div class="skill">DFM / DFA</div>
+              <div class="skill">Sheet Metal Design</div>
+              <div class="skill">3D Printing</div>
+              <div class="skill">Basic FEA / Simulation</div>
+              <div class="skill">Excel & Data Handling</div>
+            </div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <h2>Contact</h2>
+            <ul class="contact-list" style="margin-top:10px">
+              <li><strong>Email:</strong> <a href="mailto:jeevanantham26042000@gmail.com">jeevanantham26042000@gmail.com</a></li>
+              <li><strong>Location:</strong> Gingee, Tamil Nadu, India</li>
+              <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jeevanantham-s-0a9082218" target="_blank" rel="noopener">linkedin.com/in/jeevanantham-s-0a9082218</a></li>
+            </ul>
+            <div style="margin-top:14px">
+              <a class="btn" href="mailto:jeevanantham26042000@gmail.com">Email Me</a>
+            </div>
+          </div>
+
+          <div style="height:18px"></div>
+
+          <div class="card">
+            <h2>Focus</h2>
+            <p class="muted">Automotive & Aerospace — part & assembly design, surface modeling, and product development with an emphasis on manufacturability and prototyping.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+        <h2>Selected Projects</h2>
+        <div class="muted">Automotive / Aerospace • Fusion 360 & CATIA V5</div>
+      </div>
+
+      <div class="projects">
+        <!-- Project 1 -->
+        <article class="proj">
+          <img src="/images/connecting-rod-placeholder.jpg" alt="Connecting Rod - CATIA V5 (replace image)">
+          <div class="content">
+            <h3 style="margin:0">Connecting Rod — CATIA V5</h3>
+            <p class="muted" style="margin:8px 0 0">Parametric connecting rod model for a four-stroke engine. GD&amp;T annotated 2D drawings and static stress checks in Fusion 360.</p>
+            <div class="tags"><span class="tag">CATIA V5</span><span class="tag">Fusion 360</span></div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="proj">
+          <img src="/images/ergonomic-mouse-placeholder.jpg" alt="Ergonomic Mouse - Fusion 360 (replace image)">
+          <div class="content">
+            <h3 style="margin:0">Ergonomic Wireless Mouse — Fusion 360</h3>
+            <p class="muted" style="margin:8px 0 0">Product design focusing on ergonomics and internal packaging. Surface modeling & renderings created in Fusion 360; prototype validation via 3D print.</p>
+            <div class="tags"><span class="tag">Fusion 360</span><span class="tag">Product Design</span></div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="proj">
+          <img src="/images/junction-box-placeholder.jpg" alt="Sheet Metal Junction Box - CATIA V5 (replace image)">
+          <div class="content">
+            <h3 style="margin:0">Sheet Metal Junction Box — CATIA V5</h3>
+            <p class="muted" style="margin:8px 0 0">Sheet metal enclosure with flat pattern, bend allowances, and mounting features. Designed for laser cutting and press brake forming.</p>
+            <div class="tags"><span class="tag">Sheet Metal</span><span class="tag">CATIA V5</span></div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="proj">
+          <img src="/images/phone-stand-placeholder.jpg" alt="3D Printed Phone Stand - Fusion 360 (replace image)">
+          <div class="content">
+            <h3 style="margin:0">Foldable Phone Stand — Fusion 360</h3>
+            <p class="muted" style="margin:8px 0 0">Compact foldable stand designed for Additive Manufacturing. STL export and prototype testing for dimensional fit and strength.</p>
+            <div class="tags"><span class="tag">3D Print</span><span class="tag">DFAM</span></div>
+          </div>
+        </article>
+
+        <!-- Project 5 (optional) -->
+        <article class="proj">
+          <img src="/images/project-placeholder.jpg" alt="Project placeholder">
+          <div class="content">
+            <h3 style="margin:0">Additional Design Work</h3>
+            <p class="muted" style="margin:8px 0 0">Assorted freelance and academic projects — part modeling, assemblies, and manufacturing documentation.</p>
+            <div class="tags"><span class="tag">CAD</span><span class="tag">Documentation</span></div>
+          </div>
+        </article>
+
+        <!-- Project 6 (optional) -->
+        <article class="proj">
+          <img src="/images/project-placeholder-2.jpg" alt="Project placeholder">
+          <div class="content">
+            <h3 style="margin:0">Prototype & Testing</h3>
+            <p class="muted" style="margin:8px 0 0">Prototype trials and iterative design improvements focused on fit, assembly, and manufacturability.</p>
+            <div class="tags"><span class="tag">Prototyping</span><span class="tag">Testing</span></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Career Objective -->
+    <section class="section">
+      <div class="card">
+        <h2>Career Objective</h2>
+        <p class="muted">To establish myself as a Design Engineer in the Automotive or Aerospace sector, using my expertise in Fusion 360 and CATIA V5 to deliver innovative, efficient and manufacturable mechanical designs while continuously learning and advancing with emerging CAD technologies.</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="card">
+        <h2>Contact</h2>
+        <p class="muted">I am open to full-time roles, freelance CAD projects, and collaborations in automotive and aerospace design. Feel free to reach out for detailed CAD files, project discussions, or interview scheduling.</p>
+        <ul style="margin-top:12px">
+          <li><strong>Email:</strong> <a href="mailto:jeevanantham26042000@gmail.com">jeevanantham26042000@gmail.com</a></li>
+          <li><strong>Location:</strong> Gingee, Tamil Nadu, India</li>
+          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jeevanantham-s-0a9082218" target="_blank" rel="noopener">linkedin.com/in/jeevanantham-s-0a9082218</a></li>
+        </ul>
+
+        <div style="margin-top:14px">
+          <a class="btn" href="mailto:jeevanantham26042000@gmail.com">Email Me</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">© <strong>Jeevanantham S</strong> — Automotive & Aerospace Design Engineer • Built with Fusion 360 & CATIA V5</div>
+  </footer>
+
+  <!-- Usage notes:
+    1) Replace /images/*.jpg placeholders with your project thumbnails.
+    2) Upload resume.pdf to your hosting root or change the link to a Google Drive share link.
+    3) To publish on Google Sites: copy text & images into site sections or host this HTML on GitHub Pages/Netlify.
+  -->
+</body>
+</html>
